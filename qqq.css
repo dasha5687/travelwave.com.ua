@@ -1,0 +1,336 @@
+/* БАЗОВЫЕ СТИЛИ */
+* { 
+    box-sizing: border-box; 
+}
+body { 
+    margin: 0; 
+    font-family: 'Roboto', sans-serif;
+    padding-top: 60px; 
+}
+a { 
+    text-decoration: none; 
+    color: #3c87c9; 
+    transition: .3s;
+}
+img { 
+    max-width: 100%;
+    height: auto; 
+    display: block; 
+}
+/* НАВИГАЦИЯ */
+#navigation { 
+    width: 100%; 
+    min-height: 60px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.logo { 
+    display: flex;
+    align-items: center; 
+    gap: 12px; 
+    font-size: 32px; 
+    color: #3c87c9;
+    font-weight: 100;
+}
+.logo img { 
+    width: 40px;
+    height: 40px; 
+    object-fit: contain;
+}
+nav { 
+    display: flex; 
+    gap: 40px; 
+    align-items: center;
+	font-weight: 300; 
+}
+nav a { 
+    font-weight: 300;
+    font-size: 16px;
+}
+/* АДАПТИВ ДЛЯ ТЕЛЕФОНА (до 768px) */
+@media (max-width: 768px) {
+    #navigation {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        height: auto; 
+    }
+    .logo {
+        margin-bottom: 10px; 
+        font-size: 20px;
+    }
+    .logo img {
+        width: 35px;
+        height: 35px;
+    }
+    nav {
+        gap: 15px;
+        width: 100%;
+        justify-content: center;
+        padding-bottom: 5px;
+    }
+    nav a {
+        font-size: 14px;
+    }
+}
+/* БАННЕР */
+.services-hero {
+width: 100%;
+height: 80vh; 
+position: relative;
+overflow: hidden;
+}
+.services-hero img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.hero-overlay {
+position: absolute;
+inset: 0;
+background: rgba(0, 0, 0, 0.4);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 2;
+}
+.services-hero .slider-text {
+position: relative;
+width: 90%;
+max-width: 800px;
+}
+.services-hero h1 {
+font-family: 'Poppins', sans-serif;
+font-size: 42px;
+margin-bottom: 2%;
+color: #fff;
+}
+.services-hero p {
+font-size: 18px;
+font-weight: 300;
+color: #f0f0f0;
+text-align: center;
+}
+@media (max-width: 768px) {
+    .services-hero {
+        height: 60vh; 
+    }
+    .services-hero .slider-text {
+        width: 85%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .services-hero h1 {
+        font-size: 26px; 
+        line-height: 1.2;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .services-hero p {
+        font-size: 14px;
+        line-height: 1.4;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+/* АНИМАЦИЯ */
+.anim {
+opacity:0;
+transition:0.2s;
+animation: show 2s 1;
+animation-fill-mode:forwards;
+animation-delay:0.2s;
+}
+@keyframes show {
+0% { opacity:0; }
+100% { opacity:1; }
+}
+/* КОНТЕНТ */
+.service-page-content {
+padding-top: 5%;
+padding-bottom: 5%;
+text-align: center;
+}
+.section-title {
+font-family: 'Poppins', sans-serif;
+font-size: 36px;
+color: #0056b3;
+margin-bottom: 2%;
+}
+.section-description {
+max-width: 80%;
+margin: 0 auto 5%;
+font-size: 18px;
+line-height: 1.7;
+color: #555;
+}
+/* СЕТКА */
+.service-details-grid {
+margin-bottom: 5%;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 5%;
+align-items: stretch;
+}
+.detail-card {
+background: #fff;
+padding: 5%;
+border-radius: 25px;
+box-shadow: 0 15px 40px rgba(0, 123, 255, 0.08);
+text-align: left; 
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+display: block;
+width: 100%;
+display: block;
+width: 100%;
+padding: 5%;
+border-radius: 5%;
+text-decoration: none;
+color: inherit;
+}
+.detail-card:hover {
+transform: translateY(-5%);
+box-shadow: 0 20px 50px rgba(0, 123, 255, 0.15);
+border-top: 5px solid #00c2ff;
+}
+/* ИКОНКИ */
+.detail-icon {
+width: 100px;       
+height: 100px;       
+margin: 0 auto 3%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.detail-icon img {
+width: 100%;
+height: 100%;
+object-fit: contain; 
+transition: transform 0.4s ease; 
+}
+/* БАННЕР ПРИЗЫВА */
+.call-to-action-banner {
+background: linear-gradient(45deg, #007bff, #00c2ff);
+color: #fff;
+padding: 5% 3%;
+border-radius: 20px;
+max-width: 60%;
+margin: 0 auto;
+box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
+font-size: 150%;
+}
+.detail-card {
+display: block; /* важно */
+text-decoration: none;
+color: inherit;
+cursor: pointer;
+}
+.detail-card:active {
+transform: scale(0.98);
+}
+/* ФУТЕР */
+.main-footer { 
+    background: #333; 
+    color: #999; 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 20px 5%;
+    align-items: center;
+}
+.footer-right a {
+    width: 30px; 
+    height: 30px; 
+    margin-left: 15px;
+    display: inline-block;
+}
+@media (max-width: 768px) {
+    .main-footer {
+        flex-direction: column; 
+        text-align: center;    
+        gap: 20px;           
+        padding: 30px 10%;   
+    }
+    .footer-left {
+        font-size: 14px;   
+        line-height: 1.4;
+    }
+    .footer-right {
+        display: flex;    
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    .footer-right a {
+        margin: 0 10px;    
+        width: 25px;       
+        height: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-details-grid {
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between;
+        gap: 10px;
+        padding: 0 10px;
+    }
+    .detail-card {
+        flex: 0 0 48%;
+        padding: 15px 10px; 
+        border-radius: 15px; 
+        box-shadow: 0 5px 15px rgba(0, 123, 255, 0.05); 
+    }
+    .detail-icon {
+        width: 50px; 
+        height: 50px;
+        margin: 0 auto 10px;
+    }
+    .detail-card h3 {
+        font-size: 13px; 
+        margin-bottom: 8px;
+        text-align: center;
+        line-height: 1.2;
+    }
+    .detail-card p {
+        font-size: 10px;
+        line-height: 1.3;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .detail-card ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    .detail-card li {
+        font-size: 9px;
+        margin-bottom: 4px;
+        text-align: left;
+    }
+}
+@media (max-width: 768px) {
+    .call-to-action-banner {
+        max-width: 90%;
+        padding: 20px 15px; 
+        font-size: 16px;
+        border-radius: 15px;
+        text-align: center;
+        line-height: 1.4;
+        margin: 20px auto; 
+    }
+    .call-to-action-banner b, 
+    .call-to-action-banner strong {
+        font-weight: 500;
+    }
+}

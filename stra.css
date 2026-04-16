@@ -1,0 +1,220 @@
+/* БАЗОВЫЕ ПЕРЕМЕННЫЕ */
+:root {
+    --primary: #3c87c9;
+    --card-bg: #ffffff;
+    --bg-light: #f8fbff;
+}
+/* БАЗОВЫЕ СТИЛИ */
+* { box-sizing: border-box; }
+
+body { 
+    margin: 0; 
+    font-family: 'Roboto', sans-serif;
+    padding-top: 60px;
+}
+a { 
+    text-decoration: none; 
+    color: var(--primary); 
+}
+img { 
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+}   
+/* НАВИГАЦИЯ */
+#navigation { 
+    width: 100%; 
+    height: 60px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    box-shadow: 0 4px 15px rgba(60, 135, 201, 0.15); /* Голубая тень меню */
+}
+.logo { 
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    font-size: 26px; 
+    color: var(--primary);
+    font-weight: 700; 
+}
+.logo img { 
+    width: 40px;
+    height: 40px; 
+    object-fit: contain;
+}
+nav { 
+    display: flex; 
+    gap: 40px; 
+}
+nav a { 
+    font-weight: 400;
+    color: #444;
+}
+/* БАННЕР */
+.services-hero {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider-text h1 {
+    font-size: 48px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.slider-text p {
+    font-size: 20px;
+    color: #f0f0f0;
+    text-align: center;
+    font-weight: 300;
+}
+/* КАРТОЧКИ С ГОЛУБОЙ ТЕНЬЮ */
+.service-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+.detail-card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 8px 25px rgba(60, 135, 201, 0.08); 
+    border: 1px solid rgba(60, 135, 201, 0.1);
+}
+.detail-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(60, 135, 201, 0.25)
+}
+/* ИКОНКИ БЕЗ КРУГОВ */
+.detail-icon {
+    width: 70px;  
+    height: 70px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detail-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.3s;
+}
+.detail-card:hover .detail-icon img {
+    transform: scale(1.1);
+}
+/*БАННЕР ПРИЗЫВА */
+.call-to-action-banner {
+    background: linear-gradient(45deg, #007bff, #00c2ff);
+    color: #fff;
+    padding: 40px 30px; 
+    border-radius: 20px;
+    max-width: 700px; 
+    margin: 40px auto;
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.call-to-action-banner h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+.call-to-action-banner p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+/* СТИЛЬ КНОПКИ (которую не было видно) */
+.btn-order {
+    display: inline-block;
+    background-color: #fff;    
+    color: #007bff;      
+    padding: 15px 35px;
+    border-radius: 50px;     
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.btn-order:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    background-color: #f8f9fa;
+    color: #0056b3;
+}
+.btn-order:active {
+    transform: scale(0.95);
+}
+/* ФУТЕР */
+.main-footer { 
+    background: #333; 
+    color: #999; 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 20px 5%;
+    align-items: center;
+}
+.footer-right a {
+    width: 30px; 
+    height: 30px; 
+    margin-left: 15px;
+    display: inline-block;
+}
+@media (max-width: 768px) {
+    .main-footer {
+        flex-direction: column; 
+        text-align: center;    
+        gap: 20px;           
+        padding: 30px 10%;   
+    }
+    .footer-left {
+        font-size: 14px;   
+        line-height: 1.4;
+    }
+    .footer-right {
+        display: flex;    
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    .footer-right a {
+        margin: 0 10px;    
+        width: 25px;       
+        height: 25px;
+    }
+}
+/* АНИМАЦИЯ */
+.anim {
+opacity:0;
+transition:0.2s;
+animation: show 2s 1;
+animation-fill-mode:forwards;
+animation-delay:0.2s;
+}
+@keyframes show {
+0% { opacity:0; }
+100% { opacity:1; }
+}

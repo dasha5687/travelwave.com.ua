@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Контакты и Оформление - Travel Wave</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="logo2.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="mald.css">
+</head>
+<body>
+<div class="anim">
+    <header id="navigation">
+        <div class="logo">
+            <img src="logo2.png" alt="Logo">
+            <span><a href="index.html">Travel Wave</a></span>
+        </div>
+        <nav>
+            <a href="about.html">Про нас</a>
+            <a href="popular.html">Популярные туры</a>        
+            <a href="sss.html">Услуги</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+    </header>
+
+    <div class="services-hero">
+        <img src="pepole2.png" alt="Свяжитесь с нами">
+        <div class="hero-overlay">
+            <div class="slider-text">
+                <h1>Оформление заявки</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="tour-details-layout">
+            
+            <div class="tour-main-info">
+                <section id="booking-form">
+                    <h2>Заполните данные</h2>
+                    <p>После отправки формы наши менеджеры внесут вашу заявку в систему и свяжутся с вами для подтверждения.</p>
+                    
+                    <form class="feedback-form" action="proverka.php" method="POST">
+                        
+                        <label style="font-size: 14px; color: #666;">Ваше полное имя:</label>
+                        <input type="text" name="user_name" placeholder="Иванов Иван" required>
+                        
+                        <label style="font-size: 14px; color: #666;">Контактный телефон:</label>
+                        <input type="tel" name="user_phone" placeholder="+38 (0XX) XXX-XX-XX" required>
+                        
+                        <label style="font-size: 14px; color: #666;">Что вы хотите оформить?</label>
+                        <select name="order_type">
+                            <option value="tour">Бронирование тура (Мальдивы/Египет/Греция)</option>
+                            <option value="insurance">Страховой полис</option>
+                            <option value="certificate">Подарочный сертификат</option>
+                            <option value="other">Другой вопрос / Жалоба</option>
+                        </select>
+
+                        <label style="font-size: 14px; color: #666;">Дополнительные пожелания:</label>
+                        <textarea name="user_message" placeholder="Напишите здесь уточнения по датам или отелю..."></textarea>
+
+                        <input type="submit" class="btn-submit" value="Подтвердить и отправить данные">
+                    </form>
+                </section>
+            </div>
+
+            <aside class="booking-sidebar">
+                <div class="booking-card">
+                    <h3>Наш центральный офис</h3>
+                    <p style="font-size: 15px; color: #555;">г. Одесса, ул. Приморская, 42</p>
+                    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+                    
+                    <div style="text-align: left; font-size: 14px;">
+                        <p><strong>Телефон:</strong> +38 (093) 123-45-67</p>
+                        <p><strong>Email:</strong> info@travelwave.ua</p>
+                        <p><strong>Работаем:</strong> Пн-Сб, 10:00 - 19:00</p>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+</div>
+
+<footer class="main-footer">
+  <div class="footer-left">
+   <p> ©2026. Сайт создала Даша Стоянова. Учебный проект. Не является реальным агентством.</p>
+  </div>
+  <div class="footer-right">
+        <a href="#"><img src="insta.png" alt="инста"></a>
+        <a href="#"><img src="tiktok.png" alt="тик ток"></a>
+        <a href="#"><img src="tg.png" alt="тг"></a>
+  </div>
+</footer>
+
+</body>
+</html>
